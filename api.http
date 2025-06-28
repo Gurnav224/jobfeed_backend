@@ -1,0 +1,38 @@
+@base_url = http://localhost:8080/api/v1
+
+
+### / route
+GET  http://localhost:8080/
+
+### Create a new job
+POST  {{base_url}}/jobs
+Content-Type: application/json
+
+{
+  "title": "Software Engineer",
+  "company": "Tech Solutions",
+  "location": "New York",
+  "salary": 120000,
+  "type": "Full-time (On-site)",
+  "description": "We are looking for a skilled Software Engineer to join our team.",
+  "qualifications": [
+    "Bachelor's degree in Computer Science or related field",
+    "2+ years of experience in software development",
+    "Proficiency in JavaScript, HTML, CSS, and React"
+  ]
+}
+
+
+### Get all jobs
+GET  {{base_url}}/jobs
+Content-Type: application/json
+
+
+### Get a job by ID
+GET  {{base_url}}/jobs/68601ac576d09842cffaef2e
+Content-Type: application/json  
+
+
+### Delete a job by ID
+DELETE  {{base_url}}/jobs/68601ac576d09842cffaef2e
+Content-Type: application/json
