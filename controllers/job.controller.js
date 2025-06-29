@@ -32,6 +32,7 @@ export const getAllJobs = async (req, res) => {
     if (req.query.title) {
         query.title = { $regex: req.query.title, $options: 'i' }; 
     }
+    console.log(query);
   try {
     const jobs = await Job.find(query).sort({ createdAt: -1 }); 
     if (jobs.length === 0) {

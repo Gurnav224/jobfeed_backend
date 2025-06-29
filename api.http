@@ -1,4 +1,4 @@
-@base_url = http://localhost:8080/api/v1
+@base_url = https://jobfeed-backend.onrender.com/api/v1
 
 
 ### / route
@@ -35,4 +35,9 @@ Content-Type: application/json
 
 ### Delete a job by ID
 DELETE  {{base_url}}/jobs/68601ac576d09842cffaef2e
+Content-Type: application/json
+
+### Get jobs by query 
+
+GET  {{base_url}}/jobs/?query=web
 Content-Type: application/json
